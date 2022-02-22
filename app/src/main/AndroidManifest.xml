@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTask">
-        <activity android:name=".recyclerview.Orders_Recycalar_View_Activity"></activity>
+        <activity android:name=".tablayout.TabLayoutActivity"></activity>
+        <activity android:name=".recyclerview.Orders_Recycalar_View_Activity" />
         <activity android:name=".Task3" />
         <activity android:name=".MainActivity">
             <intent-filter>
