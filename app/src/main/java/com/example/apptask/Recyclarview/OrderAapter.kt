@@ -1,4 +1,4 @@
-package com.example.apptask.recyclerview
+package com.example.apptask.Recyclarview
 
 import android.view.LayoutInflater
 import android.view.View

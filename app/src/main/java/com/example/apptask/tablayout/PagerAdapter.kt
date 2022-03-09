@@ -1,27 +1,41 @@
 package com.example.apptask.tablayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
+import androidx.lifecycle.Lifecycle
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.apptask.fragment.FragmentOne
+import com.example.apptask.fragment.FragmentThree
+import com.example.apptask.fragment.FragmentTwo
 
-internal  class PagerAdapter(var context: FragmentManager, fm: TabLayoutActivity, var totalTabs: Int) :FragmentPagerAdapter(fm) {
 
-    override fun getItem(position: Int): Fragment {
-        return when (position) {
-            0 -> {
-                FragmentOne()
-            }
-            1 -> {
-               FragmentTwo()
-            }
-            2 -> {
-                FragmentThree()
-            }
-            else -> getItem(position)
-        }
-    }
+class PagerAdapter(fragmentManager: FragmentManager,lifecycle: Lifecycle):FragmentStateAdapter(fragmentManager, lifecycle) {
+         override fun getItemCount(): Int {
+             return 3
 
-    override fun getCount(): Int {
-        return totalTabs
-    }
+         }
 
-}
+         override fun createFragment(position: Int): Fragment {
+
+            return when(position){
+
+                 0 -> {
+                     FragmentOne()
+                 }
+                 1 -> {
+                     FragmentTwo()
+                 }
+                 2 -> {
+                     FragmentThree()
+                 }
+
+                 else->{
+                     Fragment()
+                 }
+
+
+
+             }
+         }
+
+
+     }

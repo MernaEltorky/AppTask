@@ -1,4 +1,4 @@
-package com.example.apptask.tablayout
+package com.example.apptask.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
